@@ -1,0 +1,17 @@
+<html>
+  <head>
+	<% include ./header.ejs %>
+  </head>
+  <body>
+    <h1>Loop it!</h1>
+    <ul>
+        <%for (var row in list){%>
+            <li>
+            	rownum : <%=row%>, 
+            	a : <%=list[row].a%>, 
+            	b : <%=list[row].b%>
+            </li>    
+  		<%}%>
+    </ul>
+  </body>
+</html>

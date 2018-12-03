@@ -1,0 +1,25 @@
+<html>
+  <head>
+	<% include ./header.ejs %>
+  </head>
+  <body>
+  	<h1><%= __('hello')%></h1>
+  	<h3>escape : <%= __('helloWithHTML')%></h3>
+  	<h3>origin : <%- __('helloWithHTML')%></h3>
+  	
+    <h1>Loop it!</h1>
+    <ul>
+        <% for(var i=0; i<length; i++){ %>
+            <li>
+                <%= "LOOP" + i %>
+            </li>
+        <% } %>
+    </ul>
+    
+    <% if(username){ %>
+	    <h2>Welcome! <%= username %> (name: <%= name %>)</h2>
+	<% }else{ %>
+	    <h2> Please Login. </h2>
+	<% } %>
+  </body>
+</html>
